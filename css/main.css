@@ -1,0 +1,120 @@
+/* Start Variables */
+:root {
+  --cl-red: hsl(0, 78%, 62%);
+  --cl-cyan: hsl(180, 62%, 55%);
+  --cl-orange: hsl(34, 97%, 64%);
+  --cl-blue: hsl(212, 86%, 64%);
+  --bg-accent: hsl(234, 12%, 34%);
+  --bg-main: hsl(229, 6%, 66%);
+  --bg-second: hsl(0, 0%, 98%);
+  --ft-wt-main: 600;
+  --ft-wt-second: 400;
+  --ft-wt-accent: 200;
+}
+/* End Variables */
+/* Start Global Rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  background-color: var(--bg-second);
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+h2 {
+  color: var(--bg-accent);
+  font-weight: var(--ft-wt-main);
+}
+p {
+  color: var(--bg-main);
+  font-weight: var(--ft-wt-second);
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* End Global Rules */
+/* Start Header */
+header {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+header h1 {
+  font-weight: 300;
+  color: var(--bg-accent);
+  margin: 0;
+  font-size: 25px;
+}
+header h2 {
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+/* End Header */
+/* Start Main */
+main {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+main .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+@media (min-width: 992px) {
+  main .content {
+    flex-direction: row;
+  }
+}
+main .box {
+  width: 320px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  box-shadow: 0px 0px 15px 1px rgb(0 0 0 / 10%);
+  border-top: 4px solid var(--cl-cyan);
+}
+main .col:nth-child(2) .box:nth-child(1) {
+  border-color: var(--cl-red);
+}
+main .col:nth-child(2) .box:nth-child(2) {
+  border-color: var(--cl-orange);
+}
+main .col:nth-child(3) .box {
+  border-color: var(--cl-blue);
+}
+main .box img {
+  width: 60px;
+  align-self: flex-end;
+}
+/* End Main */
